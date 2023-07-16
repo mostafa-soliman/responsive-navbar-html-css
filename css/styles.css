@@ -1,0 +1,188 @@
+:root {
+  --color1: #ffd01d;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+    "sans-serif";
+}
+
+.container {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.btn {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(224, 21%, 14%);
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  padding: 15px 25px;
+  display: inline-block;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+#mainmenu {
+  background-color: #000;
+  padding: 5px 0;
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  left: 0;
+}
+
+#mainmenu div.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#mainmenu img {
+  height: 35px;
+  margin-right: 10px;
+}
+
+#mainmenu h4 {
+  color: var(--color1);
+  font-size: 1.3rem;
+  font-variant: small-caps;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+#mainmenu label {
+  color: var(--color1);
+  border: 1px solid var(--color1);
+  display: inline-block;
+  padding: 0 5px 2px;
+  border-radius: 2px;
+}
+
+#menuControl {
+  display: none;
+}
+
+#menuControl + nav {
+  width: 100%;
+  display: none;
+}
+#menuControl:checked + nav {
+  display: block;
+}
+
+#mainmenu a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+#mainmenu nav > a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+}
+#mainmenu nav > a:hover {
+  background-color: var(--color1);
+}
+
+#mainmenu nav div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 8px 0;
+}
+#mainmenu nav div > a {
+  border-radius: 50%;
+  border: thin solid #fff;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+}
+
+#sec-1 {
+  background: url("../images/banner.jpg") no-repeat -250px center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+#sec-1 h4 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+#sec-1 h4 span {
+  text-transform: capitalize;
+}
+#sec-1 h2 {
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #222;
+}
+#sec-1 h2 + h2 {
+  margin-bottom: 20px;
+  color: #cd8383;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #sec-1 {
+    background: url("../images/banner.jpg") no-repeat center center/cover;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 940px;
+  }
+
+  #mainmenu div.container {
+    flex-wrap: nowrap;
+  }
+
+  #mainmenu label {
+    display: none;
+  }
+  #menuControl + nav,
+  #menuControl:checked + nav {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+  #mainmenu nav div {
+    width: auto;
+  }
+  #mainmenu nav > a {
+    padding: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1340px;
+  }
+}
